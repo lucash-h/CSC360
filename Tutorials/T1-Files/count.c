@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) { //definitely not right syntax str[] args[2] o
     if(file_ptr == NULL) printf("Something Else That Was Bad Happened");
 
     while((c = fgetc(file_ptr)) != EOF) {
-        if(c == ' ') {
+        if(isspace(c)) {
             space_count++;
         }
 
@@ -20,5 +20,5 @@ int main(int argc, char *argv[]) { //definitely not right syntax str[] args[2] o
 
     fclose(file_ptr);
 
-    printf("%d filename", space_count);
+    printf("%d filename\n", space_count);
 }
