@@ -1,24 +1,27 @@
 #include <stdio.h>
 
-int main(int argc, char *argv[]) { //definitely not right syntax str[] args[2] or something
+int main(int argc, char *argv[]) {
     FILE* file_ptr;
-    int space_count = 0;
+    int word_count = 0;
     char c;
-
-    if(argc != 2) printf("BAD THING HAPPENED");
+    int word = 1;
     
     file_ptr = fopen(argv[1], "r");
 
-    if(file_ptr == NULL) printf("Something Else That Was Bad Happened");
-
     while((c = fgetc(file_ptr)) != EOF) {
-        if(isspace(c)) {
-            space_count++;
-        }
+        //printf("HERE IS CHARACTER: %c\n", c);
 
+        if(((c == ' ') || (c == '\n')) && (word == 1)) { //space after non space char
+            word_count++;
+            word = 0;
+        } else if ((word == 0) && ((c != ' ') && (c != '\n'))) { //word and non space -> word = 1 dont incremenet
+            word = 1;
+        }
     }
 
+    if(c != ' ' || c != '\n') word_count+=1;
+    
     fclose(file_ptr);
-
-    printf("%d filename\n", space_count);
+    printf("%d %s\n", word_count, argv[1]);
+    return 0;
 }
