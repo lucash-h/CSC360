@@ -1,3 +1,6 @@
+# This is an example makefile. You may use this as a model for your own, to be used in the challenge
+
+
 CC = gcc
 CFLAGS = -Wall -Wextra -Wpedantic
 
