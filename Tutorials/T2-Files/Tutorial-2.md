@@ -135,4 +135,4 @@ Expected Output:
 (Empty history - no output)
 ```
 
-Challenge yourself! Think of other edge cases that might misbehave and cause terrifying problems.
+Challenge yourself! Think of other edge cases that might misbehave and cause terrifying problems. Solutions to this challenge will be posted after all tutorials conclude.
