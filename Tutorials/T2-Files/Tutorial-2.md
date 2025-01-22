@@ -12,11 +12,18 @@ It is recommended to create a repository under `~/CSC_360/<netlink_id>` and push
 
 ## Challenge 1:
 
-In this challenge, you will implement a very simplified version of a `history` feature similar to the one found in Unix shells, using a doubly linked list data structure. The program will maintain a history of commands entered by the user and provide functionality to view and recall previous commands. You do not need to actually create the logic for executing commands, beyond considering how they interface with the history and related doubly linked data structure. 
+In this challenge, you will implement a very simplified version of a `history` feature similar to the one found in Unix shells, using a doubly linked list data structure. 
+While the program is running, it will maintain a history of commands entered by the user and provide functionality to view and recall previous commands. 
 
-**A note on memory management...**: Avoid memory leaks, double frees and ensure proper handling of NULL pointers. Mistakes with any of these might cause tragic program behaviour at best, or undefined behaviour at worst. Remember, it's a good thing to know that your code doesn't work. Not knowing your code is broken might lead to security issues, or worse.
+You do not need to actually create the logic for *executing* the commands, beyond considering how they interface with the history and related doubly linked data structure. 
 
-### Required Components:
+`simple_history.c` is a complete implementation to the depth of this challenge. The goal of this challenge is directed towards implementing the doubly linked list declared in `history_list.h` and defined in `history_list.c`. You will provide the implementations of the functions, as described below. In additional to finishing the doubly linked list, you are required to create a `makefile`.
+
+Recall that `makefile`s can be run with `make`, the created files can be cleaned up with `make clean`.
+
+**A note on memory management...** Avoid memory leaks, double frees and ensure proper handling of NULL pointers. Mistakes with any of these might cause tragic program behaviour at best, or undefined behaviour at worst. Remember, it's a good thing to know that your code doesn't work. Not knowing your code is broken might lead to security issues, or worse.
+
+### Required Components & Behaviour:
 
 #### 1. **History\* init_history()**
 
@@ -76,9 +83,11 @@ Requirements:
 
 #### 5. **Makefile**
 
+Your makefile must link all the files to create a single executable.
+
 Examples such as the one shared in Tutorial 2 may be used as a very strong basis. Additionally, it can't hurt to review to documentation [here](https://www.gnu.org/software/make/manual/make.html).
 
-Some template code has been provided in `Tutorials/T2-Files` -- the same directory as this document. For best results, use this as a basis for your implementation. `simple_history.c` is a complete implementation to the depth of this challenge. Your focus should be directed towards `history_list.c`. Remember, you need to make your own `makefile`. Recall that `makefile`s can be run with `make`, the created files can be cleaned up with `make clean`.
+Some example code has been provided in `Tutorials/T2-Files` -- the same directory as this document. For best results, use this as a basis for your implementation. 
 
 The tests below may be run manually in order to verify expected output:
 
