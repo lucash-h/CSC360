@@ -3,7 +3,7 @@
 ## UVic CSC360 Spring 2025
 
 ** Due Tuesday February 11 at 11:55 pm** via `push` to your `gitlab.csc` repository,
-titled `Assignment-1`. Submissions must include a `makefile`, stored in the base 
+titled `a1`. Submissions must include a `makefile`, stored in the base 
 directory, using which when run with `make fetch-info` or `make pipe4`, produces an 
 executable of the same name.
  
