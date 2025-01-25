@@ -8,7 +8,7 @@ CFLAGS = -Wall -Wextra -Wpedantic
 TARGET = test
 
 # Object files
-OBJS = main.o add.o
+OBJS = history_list.o simple_history.o
 
 # Default target
 all: $(TARGET)
@@ -18,11 +18,11 @@ $(TARGET): $(OBJS)
 	$(CC) $(OBJS) -o $(TARGET)
 
 # Compilation rules
-main.o: main.c add.h
-	$(CC) $(CFLAGS) -c main.c
+history_list.o: history_list.c history_list.h
+	$(CC) $(CFLAGS) -c history_list.c
 
-add.o: add.c add.h
-	$(CC) $(CFLAGS) -c add.c
+simple_history.o: simple_history.c
+	$(CC) $(CFLAGS) -c simple_history.c
 
 # Clean rule
 clean:
