@@ -118,10 +118,10 @@ For example, if I execute the following command on the CSC Linux Servers:
 my output is:
 
 ```
-model name      : Intel(R) Xeon(R) Gold 6254 CPU @ 3.10GHz
-cpu cores       : 1
-Linux version 5.4.0-204-generic (buildd@lcy02-amd64-079) (gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2)) #224-Ubuntu SMP Thu Dec 5 13:38:28 UTC 2024
-MemTotal:        8136088 kB
+model name:   Intel(R) Xeon(R) Gold 6254 CPU @ 3.10GHz
+cpu cores:    1
+Linux version: 5.4.0-204-generic (buildd@lcy02-amd64-079) (gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2)) #224-Ubuntu SMP Thu Dec 5 13:38:28 UTC 2024
+MemTotal:   8136088 kB
 Uptime: 32 days, 0 hours, 20 minutes, 36 seconds
 ```
 
@@ -129,7 +129,9 @@ Your output may vary from this (for example, uptime will vary from one
 second to the next), but the expected output above should serve as a
 guide to your work.  The exact formatting of long lines (such as Linux
 version above) will also vary depending on console width and font
-settings.
+settings. However, the formatting printed (spacing and output) must match
+the example above. Note: as automated marking scripts are used to assist grading,
+not following the output may result in negative impact on your mark.
 
 If I execute the following command on the CSC Linux Servers:
 
@@ -138,15 +140,17 @@ If I execute the following command on the CSC Linux Servers:
 my output is:
 
 ```
-Process number: 1
+Process number:   1
 Name:   systemd
-Filename (if any): /sbin/init
-Threads:        1
-Total context switches: 30419074
+Filename (if any):    /sbin/init
+Threads:    1
+Total context switches:   30419074
 ```
 
 Again, your output may vary widely from this, depending on the actual
-contents of /proc/1 at the time you run the program.  Finally, if I
+contents of /proc/1 at the time you run the program. 
+
+
 enter:
 
 `./fetch-info -1`
@@ -169,8 +173,7 @@ that `1` and `-1`.
 
 - You may need to read strings from these files and extract
   information from them in order to produce some of the statistics
-  you need.  The libraries that have been included into the starter
-  `fetch-info.c` file may help you with this.
+  you need.  
 
 ### Restrictions
 
@@ -299,10 +302,9 @@ shown above.
 ### Restrictions
 
 - **YOU MAY NOT CALL ANY STDIO LIBRARY FUNCTIONS IN YOUR SOLUTION TO
-  `pipe4.c`!!**  The libraries that have been included in the starter
-  file are all the libraries you may use (you may use `stdio.h` functions
+  `pipe4.c`!!**  You may use `stdio.h` functions
   while debugging, **but any calls to those functions must be commented
-  out of your final submission**).
+  out of your final submission**.
 
 - You should not need to use dynamic memory (`malloc`, `free`, etc) for
   this part of the assignment.  If you do choose to use dynamic
@@ -310,10 +312,7 @@ shown above.
   undefined memory operations (double-frees, dereferences of `NULL`
   pointers, etc).
 
-- Your source code file must be compiled with the following command:
-  `gcc -Wall -Werror -std=c18 -o pipe4 pipe4.c`  If it cannot be
-  compiled due to syntax errors or warnings, it may receiving a
-  failing grade.
+- Your source code file must be compiled with a makefile, as specified above. 
 
 
 ## Submitting your work
